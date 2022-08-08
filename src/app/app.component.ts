@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ListViewHomeComponent } from './list-view/list-view-home/list-view-home.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ulAbrechnungPrototyp';
+
 }

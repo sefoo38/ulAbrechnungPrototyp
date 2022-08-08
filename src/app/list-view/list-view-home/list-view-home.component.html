@@ -1,0 +1,112 @@
+<img class="backgroundImage" src="../../assets/images/CMS_Module_Background.PNG" />
+
+<div class="moduleSegment">
+
+    <div class="ui padded grid">
+        <div class="row">
+            <div class="twelve wide column">
+
+                <form class="ui form">
+                    <div class="field">
+                        <input type="text" name="first-name" placeholder="Suchen">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="two wide column">
+
+                <input type="date" />
+
+            </div>
+            
+
+            <div class="two wide column mainIcons">
+
+                <i class="sliders horizontal icon"></i>
+                <a routerLink="/charts">
+                    <i class="chart pie icon"></i>
+                </a>
+
+                <a routerLink="/settings">
+                    <i class="cog icon"></i>
+                </a>
+
+                <i class="download icon"></i>
+                <i class="upload icon"></i>
+
+            </div>
+        </div>
+        <div class="eight column row sortRow">
+            <div class="column">
+                Datum
+                <i class="angle up icon"></i>
+                <i class="angle down icon"></i>
+            </div>
+            <div class="column">
+                Name
+                <i class="angle up icon"></i>
+                <i class="angle down icon"></i>
+            </div>
+            <div class="column">
+                Abteilung
+                <i class="angle up icon"></i>
+                <i class="angle down icon"></i>
+            </div>
+            <div class="column">
+                Summe
+                <i class="angle up icon"></i>
+                <i class="angle down icon"></i>
+            </div>
+            <div class="column">
+                Status
+                <i class="angle up icon"></i>
+                <i class="angle down icon"></i>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="row">
+            <div class="column listContainer">                
+
+                <div class="ui divided items">
+                    
+                    <div class="item" *ngFor="let entry of entries">
+                        <div class="content">
+                            <a class="header">{{entry.trainer}}</a>
+                            <div class="meta">
+                                
+                                <span class="cinema">{{entry.function}}</span>
+                                <span class="cinema">{{entry.location}}</span>
+                                <span class="cinema">{{entry.date}}</span>
+                                <span class="cinema">{{entry.role}}</span>
+                                <span class="cinema">Stundenlohn: {{entry.hourRate}} €</span>
+                                <span class="cinema">Pauschale: {{entry.flatrate}} €</span>
+                                <span class="cinema">Auslagen: {{entry.expenses}} €</span>
+
+                            </div>
+                            <div class="description">
+                                <span class="cinema">{{entry.description}}</span>
+                            </div>
+                            <div class="extra">
+                                <div class="ui right floated green button">
+                                    Genehmigen
+                                </div>
+                                <div class="ui right floated orange button">
+                                    Zurückgeben
+                                </div>
+                                
+                                <div class="ui label">{{entry.department}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
